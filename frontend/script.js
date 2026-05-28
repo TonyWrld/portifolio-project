@@ -1,5 +1,4 @@
-// Replace this with your deployed Render backend URL before publishing the frontend.
-const backendUrl = 'https://your-backend.onrender.com/api/profile';
+const backendUrl = 'https://portifolio-project-66d5.onrender.com/api/profile';
 const apiStatusText = document.getElementById('statusText');
 const bioEl = document.getElementById('bio');
 const skillsList = document.getElementById('skillsList');
@@ -12,13 +11,18 @@ const fallbackProfile = {
   skills: ['Python', 'Data Analysis', 'Machine Learning', 'SQL', 'JavaScript', 'Web Development'],
   education: [
     'Bachelor Degree in Data Science, EASTC',
-    'Projects: Car Dealership System, Hospital System, Agricultural Management System',
+    'Projects: Car Dealership System, Super Chef Delivery, Hospital System, Agricultural Management System',
   ],
   projects: [
     {
       title: 'Car Dealership System',
       description: 'A management application for tracking inventory, customers, and sales for a dealership.',
       tech: 'JavaScript, HTML, CSS, Node.js',
+    },
+    {
+      title: 'Super Chef Delivery',
+      description: 'A food delivery application for managing orders, drivers, and Ordering private chefs.',
+      tech: 'React, Node.js, MongoDB',
     },
     {
       title: 'Hospital System',
@@ -46,18 +50,21 @@ function renderProfile(data) {
     .map((skill) => `<div class="skill-pill">${skill}</div>`)
     .join('');
 
-  educationList.innerHTML = data.education
-    .map((item) => `<li>${item}</li>`)
-    .join('');
+  educationList.innerHTML = `
+  <li>${data.education.course}</li>
+  <li>${data.education.institution}</li>
+  <li>${data.education.description}</li>
+`;
 
   projectsList.innerHTML = data.projects
     .map(
       (project) => `
       <article class="project-card">
-        <h3>${project.title}</h3>
+        <h3>${project.name}</h3>
         <p>${project.description}</p>
-        <div class="project-meta">${project.tech}</div>
-      </article>
+      <div class="project-meta">
+         ${project.technologies.join(', ')}
+      </div> 
     `
     )
     .join('');
@@ -80,7 +87,7 @@ function showStatus(message, success = true) {
   apiStatusText.style.color = success ? '#a5f3fc' : '#fca5a5';
 }
 
-fetch(backendUrl)
+fetch("https://portifolio-project-66d5.onrender.com/api/profile")
   .then((response) => {
     if (!response.ok) {
       throw new Error('Backend did not respond');
