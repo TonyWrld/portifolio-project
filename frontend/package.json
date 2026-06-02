@@ -1,0 +1,9 @@
+{
+  "name": "mostone-method-ndaula-portfolio-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static portfolio frontend for Mostone Method Ndaula",
+  "scripts": {
+    "build": "echo Static site ready"
+  }
+}
