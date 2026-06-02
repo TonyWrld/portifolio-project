@@ -3,51 +3,217 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MOSTONE METHOD NDAULA | Portfolio</title>
+    <title>Mostone Method Ndaula | Data Science Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Hello, I am</p>
-        <h1>MOSTONE METHOD NDAULA</h1>
-        <p id="bio">Data science student at EAST AFRICAN STATISTICAL TRAINING CENTER (EASTC), building practical systems and data-driven solutions.</p>
-        <div class="actions">
-          <a class="button" href="#projects">View Projects</a>
-          <a class="button button-secondary" href="#contact">Contact Me</a>
-        </div>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="#home" aria-label="Mostone Method Ndaula home">
+          <span>Mostone</span>
+          <small>Data Science Portfolio</small>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+          Menu
+        </button>
+        <nav class="nav-links" id="primaryNav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
     </header>
 
-    <main class="container">
-      <section id="skills" class="card">
-        <h2>Skills</h2>
-        <div id="skillsList" class="grid"></div>
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-grid reveal">
+          <div class="hero-copy">
+            <p class="eyebrow">Data Science & System Development</p>
+            <h1>Mostone Method Ndaula</h1>
+            <p class="hero-lead">
+              I build intelligent data systems, operational dashboards, and practical digital tools for business,
+              healthcare, and agriculture.
+            </p>
+            <p id="bio" class="hero-bio">
+              Data science student at East African Statistical Training Center (EASTC), building practical systems and
+              data-driven solutions for business and community impact.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#projects">View Projects</a>
+              <a class="button button-secondary" href="#contact">Let's Connect</a>
+            </div>
+          </div>
+
+          <aside class="profile-card" aria-label="Profile summary">
+            <img class="profile-image" src="profile.jpg" alt="Profile photo of Mostone Method Ndaula" />
+            <div class="profile-body">
+              <p class="profile-label">Profile</p>
+              <h2>Data Science Student</h2>
+              <p>Bachelor Degree in Data Science at East African Statistical Training Center (EASTC).</p>
+            </div>
+            <div class="profile-stats">
+              <div>
+                <strong id="statProjects">3+</strong>
+                <span>Projects</span>
+              </div>
+              <div>
+                <strong>3</strong>
+                <span>Systems</span>
+              </div>
+              <div>
+                <strong>EASTC</strong>
+                <span>Education</span>
+              </div>
+            </div>
+          </aside>
+        </div>
       </section>
 
-      <section id="qualifications" class="card">
-        <h2>Qualifications</h2>
-        <ul id="educationList"></ul>
+      <section class="portfolio-menu" aria-label="Portfolio category menu">
+        <div class="container">
+          <div class="menu-heading">
+            <p class="eyebrow">Portfolio Menu</p>
+            <h2>Choose a category</h2>
+          </div>
+          <div class="category-grid">
+            <a class="category-link" href="#about">
+              <span>01</span>
+              <strong>About</strong>
+              <small>Professional summary</small>
+            </a>
+            <a class="category-link" href="#skills">
+              <span>02</span>
+              <strong>Skills</strong>
+              <small>Technical strengths</small>
+            </a>
+            <a class="category-link" href="#projects">
+              <span>03</span>
+              <strong>Projects</strong>
+              <small>Built systems</small>
+            </a>
+            <a class="category-link" href="#education">
+              <span>04</span>
+              <strong>Education</strong>
+              <small>Academic path</small>
+            </a>
+            <a class="category-link" href="#contact">
+              <span>05</span>
+              <strong>Contact</strong>
+              <small>Work together</small>
+            </a>
+          </div>
+        </div>
       </section>
 
-      <section id="projects" class="card">
-        <h2>Projects</h2>
-        <div id="projectsList" class="project-grid"></div>
+      <section class="section" id="about">
+        <div class="container section-grid reveal">
+          <div class="section-copy">
+            <p class="eyebrow">About Me</p>
+            <h2>Focused on practical systems that turn data into decisions.</h2>
+            <p>
+              I combine data analysis, web development, and system design to create solutions that are useful in real
+              environments. My work is strongest where clear information, automation, and better operations meet.
+            </p>
+          </div>
+          <div class="highlight-grid">
+            <article class="feature-card">
+              <span>01</span>
+              <h3>Data-backed development</h3>
+              <p>Building tools with analytics, reporting, and clean information flow at the center.</p>
+            </article>
+            <article class="feature-card">
+              <span>02</span>
+              <h3>Operational systems</h3>
+              <p>Creating management systems for vehicles, hospital records, farm operations, and daily workflows.</p>
+            </article>
+          </div>
+        </div>
       </section>
 
-      <section id="contact" class="card contact-card">
-        <h2>Contact</h2>
-        <div id="contactInfo"></div>
+      <section class="section section-muted" id="skills">
+        <div class="container reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Skills</p>
+            <h2>Technical capabilities</h2>
+            <p>Core tools and abilities I use to design, analyze, automate, and build.</p>
+          </div>
+          <div id="skillsList" class="skills-list"></div>
+        </div>
       </section>
 
-      <section id="apiStatus" class="card api-status">
-        <h2>API Status</h2>
-        <p id="statusText">Loading portfolio data...</p>
+      <section class="section" id="projects">
+        <div class="container reveal">
+          <div class="section-heading">
+            <p class="eyebrow">Projects</p>
+            <h2>Featured work</h2>
+            <p>Selected systems built around real operations and community needs.</p>
+          </div>
+          <div id="projectsList" class="project-grid"></div>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="education">
+        <div class="container education-layout reveal">
+          <div class="section-copy">
+            <p class="eyebrow">Education</p>
+            <h2>Academic foundation</h2>
+            <p>Studying data science with a focus on practical modeling, analytics, and system development.</p>
+          </div>
+          <article class="education-card">
+            <h3>Bachelor Degree in Data Science</h3>
+            <p>East African Statistical Training Center (EASTC)</p>
+            <ul id="educationList" class="education-details"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container contact-grid reveal">
+          <div class="contact-copy">
+            <p class="eyebrow">Contact</p>
+            <h2>Let's build something useful.</h2>
+            <p>
+              I am open to collaborations, internships, and freelance projects involving data science, dashboards,
+              automation, and system development.
+            </p>
+            <div id="contactInfo" class="contact-details"></div>
+            <div id="socialLinks" class="social-links"></div>
+          </div>
+
+          <form id="contactForm" class="contact-form">
+            <h3>Send a message</h3>
+            <label class="form-field">
+              <span>Name</span>
+              <input type="text" name="name" class="form-input" placeholder="Your name" required />
+            </label>
+            <label class="form-field">
+              <span>Email</span>
+              <input type="email" name="email" class="form-input" placeholder="you@example.com" required />
+            </label>
+            <label class="form-field">
+              <span>Message</span>
+              <textarea name="message" class="form-textarea" rows="5" placeholder="Tell me about your project" required></textarea>
+            </label>
+            <button type="submit" class="button">Send message</button>
+            <p id="contactFormStatus" class="form-status"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="api-status" aria-label="Portfolio API status">
+        <div class="container">
+          <p id="statusText">Loading portfolio data...</p>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>"SURVIVING IS WINNING".</p>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>Portfolio created for EASTC Cloud Computing assignment.</p>
+        <p>Made by Mostone Method Ndaula.</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>

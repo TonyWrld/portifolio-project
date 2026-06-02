@@ -28,8 +28,8 @@ Then the API will run on `http://localhost:4000/api/profile`.
 
 ## Next steps
 
-1. Update the bio, skills, qualifications, projects, and contact details in `frontend/script.js` and `backend/server.js` if needed.
+1. Update the bio, skills, education, projects, and contact details in `frontend/script.js` and `backend/server.js` if needed.
 2. Deploy `frontend/` to Vercel as a static site.
 3. Deploy `backend/` to Render using the provided `start` script.
 
-> After Render deployment, replace the `apiBaseUrl` value in `frontend/script.js` with your Render app URL so the frontend can load the live profile data.
+> After Render deployment, replace the `backendUrl` value in `frontend/script.js` with your Render app URL so the frontend can load the live profile data.
